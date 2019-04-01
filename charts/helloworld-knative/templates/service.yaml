@@ -9,7 +9,7 @@ spec:
       revisionTemplate:
         spec:
           container:
-            image: docker.io/scranton/helloworld-go
+            image: 10.31.250.228:5000/jstrachan/helloworld-knative:0.0.5
             imagePullPolicy: Always
             env:
               - name: TARGET
