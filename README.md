@@ -223,3 +223,4 @@ kubectl delete --filename secret.yaml --filename serviceaccount.yaml --filename 
 * <https://github.com/knative/docs/blob/master/install/getting-started-knative-app.md>
 * <https://github.com/knative/docs>
 * <https://gloo.solo.io/getting_started/kubernetes/gloo_with_knative/>
+
