@@ -1,14 +1,14 @@
 apiVersion: serving.knative.dev/v1alpha1
 kind: Service
 metadata:
-  name: helloworld-go
+  name: {{ template "fullname" . }}
 spec:
   runLatest:
     configuration:
       revisionTemplate:
         spec:
           container:
-            image: 10.31.250.228:5000/jstrachan/helloworld-knative:0.0.5
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: Always
             env:
               - name: TARGET

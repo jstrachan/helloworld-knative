@@ -1,1 +1,1 @@
-# Java application
+# Knative application
