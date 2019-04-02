@@ -1,0 +1,110 @@
+Step: build-step-credential-initializer-r7rl6:
+
+{"level":"warn","ts":1554188905.6657119,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1554188905.6676111,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-jstrachan-helloworld-knative-master-gzsks:
+
+{"level":"warn","ts":1554188908.058815,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1554188909.231209,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/jstrachan/helloworld-knative\" @ \"v0.1.1\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-setup-**-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-make-build:
+
+echo building with make
+building with make
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] Downloading base image golang                
+ERROR: logging before flag.Parse: E0402 07:11:08.411261       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+ERROR: logging before flag.Parse: E0402 07:11:08.433865       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+2019/04/02 07:11:08 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:56548eadfbce43d2e01a342351ec8743d12d61a5e03c7639ad04ed1f5882ba0e: no such file or directory 
+[36mINFO[0m[0001] Downloading base image golang                
+2019/04/02 07:11:09 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] Checking for cached layer 10.67.240.96:5000/87739c1cf110a43606445f6dffc1a62f51a2ef62ad1bb706b7570f32183a3e25... 
+2019/04/02 07:11:10 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN CGO_ENABLED=0 GOOS=linux go build -v -o helloworld 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN CGO_ENABLED=0 GOOS=linux go build -v -o helloworld requires it. 
+[36mINFO[0m[0034] Taking snapshot of full filesystem...        
+[36mINFO[0m[0045] WORKDIR /go/src/github.com/knative/docs/helloworld 
+[36mINFO[0m[0045] cmd: workdir                                 
+[36mINFO[0m[0045] Changed working directory to /go/src/github.com/knative/docs/helloworld 
+[36mINFO[0m[0045] Creating directory /go/src/github.com/knative/docs/helloworld 
+[36mINFO[0m[0045] Taking snapshot of files...                  
+[36mINFO[0m[0045] Using files from context: [/workspace/source] 
+[36mINFO[0m[0045] COPY . .                                     
+[36mINFO[0m[0045] Taking snapshot of files...                  
+[36mINFO[0m[0045] RUN CGO_ENABLED=0 GOOS=linux go build -v -o helloworld 
+[36mINFO[0m[0045] cmd: /bin/sh                                 
+[36mINFO[0m[0045] args: [-c CGO_ENABLED=0 GOOS=linux go build -v -o helloworld] 
+net
+net/textproto
+crypto/x509
+internal/x/net/http/httpguts
+internal/x/net/http/httpproxy
+crypto/tls
+net/http/httptrace
+net/http
+github.com/knative/docs/helloworld
+[36mINFO[0m[0053] Taking snapshot of full filesystem...        
+[36mINFO[0m[0063] Pushing layer 10.67.240.96:5000/87739c1cf110a43606445f6dffc1a62f51a2ef62ad1bb706b7570f32183a3e25 to cache now 
+ERROR: logging before flag.Parse: E0402 07:12:11.919748       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+ERROR: logging before flag.Parse: E0402 07:12:11.937444       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+2019/04/02 07:12:12 pushed blob sha256:94e5d6802befc754fc9d642356f61267d40995c89359323af1e4354c5e9abe8a
+2019/04/02 07:12:12 pushed blob sha256:08de81dc9843a267775a6192982da186dffe318a14bdfca1f964daef09a8f3fe
+2019/04/02 07:12:13 10.67.240.96:5000/87739c1cf110a43606445f6dffc1a62f51a2ef62ad1bb706b7570f32183a3e25:latest: digest: sha256:674b4856d4adc9660354e5c764027daa2f545f0caffb15ed00dfe612aa5db935 size: 428
+[36mINFO[0m[0064] Storing source image from stage 0 at path /kaniko/stages/0 
+[36mINFO[0m[0090] Deleting filesystem...                       
+[36mINFO[0m[0093] Downloading base image alpine                
+2019/04/02 07:12:42 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0094] Error while retrieving image from cache: getting file info: stat /workspace/sha256:d05ecd4520cab5d9e5d877595fb0532aadcd6c90f4bbc837bc11679f704c4c82: no such file or directory 
+[36mINFO[0m[0094] Downloading base image alpine                
+2019/04/02 07:12:43 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0095] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0095] Taking snapshot of full filesystem...        
+[36mINFO[0m[0097] COPY --from=builder /go/src/github.com/knative/docs/helloworld/helloworld /helloworld 
+[36mINFO[0m[0097] Taking snapshot of files...                  
+[36mINFO[0m[0097] ENV PORT 8080                                
+[36mINFO[0m[0097] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0097] CMD ["/helloworld"]                          
+[36mINFO[0m[0097] No files changed in this command, skipping snapshotting. 
+2019/04/02 07:12:46 pushed blob sha256:eae8b139cf6835df76fbf64e5c7ee6bbafd53d050c91571442d4e58b63dbd580
+2019/04/02 07:12:46 pushed blob sha256:8e402f1a9c577ded051c1ef10e9fe4492890459522089959988a4852dee8ab2c
+2019/04/02 07:12:46 pushed blob sha256:134140328c971c2cfd869c0160319c4619159cf304681752029a0d1ef6aa5bfb
+2019/04/02 07:12:46 10.67.240.96:5000/jstrachan/helloworld-knative:0.1.1: digest: sha256:6583a8b949ad0ca0fac35c6a2be64347e9c4ddc5596ba83ccf54fe39d0b0095c size: 592
+Step: build-step-build-post-build:
+
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+Step: build-step-promote-changelog:
+
+Converted /workspace/source/charts/helloworld-knative to an unshallow repository
+Generating change log from git ref v0.1.0 => ea7d907844ad261662f9a1f94823a1250de4ab93
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Finding issues in commit messages using git format
+No release found for jstrachan/helloworld-knative and tag v0.1.1 so creating a new release
+Updated the release information at https://github.com/jstrachan/helloworld-knative/releases/tag/v0.1.1
+generated: /workspace/source/charts/helloworld-knative/templates/release.yaml
+Created Release helloworld-knative-0-1-1 resource in namespace **
+Updating PipelineActivity jstrachan-helloworld-knative-master-1 with version 0.1.1
+Updated PipelineActivities jstrachan-helloworld-knative-master-1 with release notes URL: https://github.com/jstrachan/helloworld-knative/releases/tag/v0.1.1
+Step: build-step-promote-helm-release:
+
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file helloworld-knative-0.1.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-**-promote:
+
+prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app helloworld-knative version 0.1.1 to namespace **-staging
+error: POST https://api.github.com/repos/cb-kubecd/environment-jstrachan-t2-staging/pulls: 422 Validation Failed [{Resource:PullRequest Field:head Code:invalid Message:}]
+{"component":"entrypoint","error":"wrapped process failed: exit status 1","level":"error","msg":"Error executing test process","time":"2019-04-02T07:13:08Z"}
