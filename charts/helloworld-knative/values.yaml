@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: helloworld-knative
-  tag: dev
+  repository: gcr.io/jenkinsx-dev/helloworld-knative
+  tag: 0.1.12
   pullPolicy: IfNotPresent
 service:
   name: helloworld-knative
